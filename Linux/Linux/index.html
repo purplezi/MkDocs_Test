@@ -1,0 +1,1849 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="ja">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>嵌入式计算机系统实验自救手册 - PurpleCypress</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#e91e63">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,700%7CFira+Mono&display=fallback">
+        <style>body,input{font-family:"Fira Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Fira Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="pink" data-md-color-accent="cyan">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#csb-" tabindex="0" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="PurpleCypress" aria-label="PurpleCypress" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">school</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              PurpleCypress
+            </span>
+            <span class="md-header-nav__topic">
+              
+                嵌入式计算机系统实验自救手册
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../.." class="md-tabs__link">
+          简介
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../CSAPP/CSAPP-PartZero/" class="md-tabs__link">
+          CSAPP
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Network/ComputerNetwork/" class="md-tabs__link">
+          Computer Network
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../English/speaking/" class="md-tabs__link">
+          English
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Forensics/image/" class="md-tabs__link">
+          Forensics
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" class="md-tabs__link md-tabs__link--active">
+          Linux
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../YOLO/yolo%E5%8E%9F%E7%90%86/" class="md-tabs__link">
+          YOLO
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Socket/socket/" class="md-tabs__link">
+          Socket
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="PurpleCypress" class="md-nav__button md-logo">
+      
+        <i class="md-icon">school</i>
+      
+    </a>
+    PurpleCypress
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      简介
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        简介
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="首页" class="md-nav__link">
+      首页
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      CSAPP
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        CSAPP
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../CSAPP/CSAPP-PartZero/" title="【考研向】计算机系统基本概念" class="md-nav__link">
+      【考研向】计算机系统基本概念
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../CSAPP/CSAPP-PartOne-1/" title="【考研向】程序结构和执行-信息的表示和处理" class="md-nav__link">
+      【考研向】程序结构和执行-信息的表示和处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../CSAPP/CSAPP-PartOne-2/" title="【考研向】程序结构和执行-程序的机器级表示" class="md-nav__link">
+      【考研向】程序结构和执行-程序的机器级表示
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../CSAPP/CSAPP-PartTwo/" title="【考研向】在系统上运行程序" class="md-nav__link">
+      【考研向】在系统上运行程序
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../CSAPP/CSAPP-PartThree/" title="【考研向】程序间的交互和通信" class="md-nav__link">
+      【考研向】程序间的交互和通信
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Computer Network
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Computer Network
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Network/ComputerNetwork/" title="工大计网" class="md-nav__link">
+      工大计网
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      English
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        English
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../English/speaking/" title="Speaking" class="md-nav__link">
+      Speaking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../English/writing/" title="Writing" class="md-nav__link">
+      Writing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../English/listening/" title="Listening" class="md-nav__link">
+      Listening
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../English/reading/" title="Reading" class="md-nav__link">
+      Reading
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../English/reading-hw5-a/" title="Reading-Homework5-1" class="md-nav__link">
+      Reading-Homework5-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../English/reading-hw5-b/" title="Reading-Homework5-2" class="md-nav__link">
+      Reading-Homework5-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../English/reading-hw6/" title="Reading-Homework6" class="md-nav__link">
+      Reading-Homework6
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../English/reading-hw7/" title="Reading-Homework7" class="md-nav__link">
+      Reading-Homework7
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Forensics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Forensics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Forensics/image/" title="数字图像取证" class="md-nav__link">
+      数字图像取证
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Linux
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Linux
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        嵌入式计算机系统实验自救手册
+      </label>
+    
+    <a href="./" title="嵌入式计算机系统实验自救手册" class="md-nav__link md-nav__link--active">
+      嵌入式计算机系统实验自救手册
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    Step 1
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment" class="md-nav__link">
+    Environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experiment" class="md-nav__link">
+    Experiment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-" class="md-nav__link">
+    1 - 新建虚拟机
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-" class="md-nav__link">
+    2 - 修改配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-" class="md-nav__link">
+    3 - 安装系统
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2" class="md-nav__link">
+    Step 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3" class="md-nav__link">
+    Step 3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4delete" class="md-nav__link">
+    Step 4【delete】
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5" class="md-nav__link">
+    Step 5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6" class="md-nav__link">
+    Step 6
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request_1" class="md-nav__link">
+    Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experiment_1" class="md-nav__link">
+    Experiment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7" class="md-nav__link">
+    Step 7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8" class="md-nav__link">
+    Step 8
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Linux_Corresponence_Windows/" title="Linux与Windows文件交互" class="md-nav__link">
+      Linux与Windows文件交互
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      YOLO
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        YOLO
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../YOLO/yolo%E5%8E%9F%E7%90%86/" title="yolo原理" class="md-nav__link">
+      yolo原理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../YOLO/yolo_spp_code_1/" title="yolo_spp_code_学习笔记1" class="md-nav__link">
+      yolo_spp_code_学习笔记1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../YOLO/yolo_spp_code_2/" title="yolo_spp_code_学习笔记2" class="md-nav__link">
+      yolo_spp_code_学习笔记2
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Socket
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Socket
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Socket/socket/" title="socket基础" class="md-nav__link">
+      socket基础
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    Step 1
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment" class="md-nav__link">
+    Environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experiment" class="md-nav__link">
+    Experiment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-" class="md-nav__link">
+    1 - 新建虚拟机
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-" class="md-nav__link">
+    2 - 修改配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-" class="md-nav__link">
+    3 - 安装系统
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2" class="md-nav__link">
+    Step 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3" class="md-nav__link">
+    Step 3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4delete" class="md-nav__link">
+    Step 4【delete】
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5" class="md-nav__link">
+    Step 5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6" class="md-nav__link">
+    Step 6
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request_1" class="md-nav__link">
+    Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experiment_1" class="md-nav__link">
+    Experiment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7" class="md-nav__link">
+    Step 7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8" class="md-nav__link">
+    Step 8
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="csb-">csb-嵌入式计算机系统实验自救手册<a class="headerlink" href="#csb-" title="Permanent link">&para;</a></h1>
+<h2 id="step-1">Step 1<a class="headerlink" href="#step-1" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>在C:盘下新建以自己名字字母简写为名称的虚拟机并安装以自己名字字母简写+centos为名称的centos系统</strong></li>
+</ul>
+<h3 id="environment">Environment<a class="headerlink" href="#environment" title="Permanent link">&para;</a></h3>
+<ul>
+<li>vmware version 未知</li>
+<li>centos 8</li>
+</ul>
+<h3 id="request">Request<a class="headerlink" href="#request" title="Permanent link">&para;</a></h3>
+<ul>
+<li>老师提供centos 8图形化界面的镜像iso文件</li>
+</ul>
+<h3 id="experiment">Experiment<a class="headerlink" href="#experiment" title="Permanent link">&para;</a></h3>
+<h4 id="1-">1 - 新建虚拟机<a class="headerlink" href="#1-" title="Permanent link">&para;</a></h4>
+<p><strong>【典型】的方法 - 推荐</strong> <img alt="🏳🌈" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f3f3-1f308.svg" title=":rainbow_flag:" /></p>
+<ol>
+<li>文件 &gt; 新建虚拟机 &gt; 典型 &gt; 下一步 &gt; <strong>稍后安装操作系统</strong> </li>
+<li>客户机操作系统选择<u>Linux</u>，版本选择centos7(由于学生机器只有centos7可供选择)</li>
+<li>虚拟机名称改为以自己名字字母简写+centos</li>
+<li>处理器配置、此虚拟机的内存、网络类型、选择磁盘、指定磁盘容量、指定磁盘文件目前无需修改，可稍后再调整</li>
+</ol>
+<p><strong>【自定义】的方法</strong></p>
+<ol>
+<li>文件 &gt; 新建虚拟机 &gt; 自定义(高级) &gt; 下一步 &gt; <strong>稍后安装操作系统</strong> </li>
+<li>客户机操作系统选择<u>Linux</u>，版本选择centos7(由于学生机器只有centos7可供选择)</li>
+<li>虚拟机名称改为以自己名字字母简写+centos</li>
+<li>处理器配置、此虚拟机的内存、网络类型、选择I/O控制器类型、选择磁盘类型、选择磁盘、指定磁盘容量、指定磁盘文件目前无需修改，可稍后再调整</li>
+</ol>
+<h4 id="2-">2 - 修改配置<a class="headerlink" href="#2-" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>编辑虚拟机设置，选择CD/DVD，使用ISO映像文件</p>
+<p><img alt="使用iso映像文件" src="../img/use-iso.png" /></p>
+</li>
+<li>
+<p><img alt="⭐️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2b50.svg" title=":star:" />网络适配器：NAT 模式 和 桥接模式都可，亲测NAT在学生机上可能无法成功，桥接可，两者灵活切换</p>
+<p><img alt="修改网络连接模式" src="../img/bridge-network.png" /></p>
+</li>
+<li>
+<p>内存可灵活调大</p>
+</li>
+</ul>
+<h4 id="3-">3 - 安装系统<a class="headerlink" href="#3-" title="Permanent link">&para;</a></h4>
+<ul>
+<li>选install centos linux 8(第一个)，不选test<ul>
+<li>若出现<code>end Kernel panic - not syncing:Fatal exception Vmware</code>，则在虚拟机设置中<u>移除打印机</u><img alt="🐛" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f41b.svg" title=":bug:" /></li>
+</ul>
+</li>
+<li>软件选择<ul>
+<li>文件及存储服务器(包含nfs)</li>
+<li>FTP服务器</li>
+<li>基本网页服务器</li>
+<li>开发工具</li>
+<li>RPM开发工具</li>
+</ul>
+</li>
+<li>安装目的地：点击选择<strong>本地标准磁盘</strong>，要连续确认<strong>两次</strong>才可成功</li>
+<li>开始安装ing...  2020.10.25 23:05 - 2020.10.25 23:31 历时26分钟</li>
+<li>此时可以进行Root密码的创建：123456789 &amp; 也可创建用户(不创建的话，就是Root用户登录)</li>
+<li>安装后重启，需要<strong>接受许可证</strong>才能成功开机</li>
+<li>ps：如果看着不习惯，则查看 &gt; 自动调整大小 &gt; 自动适应客户机</li>
+</ul>
+<h2 id="step-2">Step 2<a class="headerlink" href="#step-2" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>在新建的centos系统中新建/test文件夹，配置并开启nfs服务，把自己的/test文件夹挂载到/var/www文件夹下</strong></p>
+</li>
+<li>
+<p>点击左上角的“活动”，选择<strong>终端</strong>，切换到Root用户</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>su root
+</code></pre></div>
+</td></tr></table>
+</li>
+<li>
+<p>测试网络连通性</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1"># 查看网络状态</span>
+ifconfig 
+
+<span class="c1"># 配置本机ipv4地址</span>
+<span class="c1"># 在自己windows本机的ipv4地址上+100</span>
+<span class="c1"># ens33是ifconfig查看的网卡名称，除了lo和virbr0之外</span>
+ifconfig ens33:1 <span class="m">192</span>.168.1.104
+</code></pre></div>
+</td></tr></table>
+</li>
+<li>
+<p>新建/test文件夹</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1"># pwd 显示当前路径</span>
+/home/csb
+
+ls 
+<span class="c1"># 出现 桌面 音乐 下载</span>
+
+<span class="c1"># 新建test共享文件夹</span>
+mkdir <span class="nb">test</span>
+
+<span class="c1"># 修改权限 - 不知道用于啥</span>
+chmod -R <span class="m">777</span> /home/csb/test
+</code></pre></div>
+</td></tr></table>
+<p><img alt="新建文件夹test" src="../img/mkdir-test.png" /></p>
+</li>
+<li>
+<p>配置并开启nfs服务</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>service nfs-server start
+<span class="c1"># https://blog.csdn.net/qq_33559992/article/details/51866043</span>
+<span class="c1"># 查看状态</span>
+systemctl status nfs-server 
+
+systemctl status rpcbind
+</code></pre></div>
+</td></tr></table>
+<p><img alt="开启nfs服务" src="../img/startnfs-server.png" /></p>
+</li>
+<li>
+<p>把自己的/test文件夹挂载到/var/www文件夹下【待确认】</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>mount --bind /home/csb/test /var/www
+<span class="c1"># 同：mount -o bind /home/csb/test/ /var/www/</span>
+<span class="c1"># 同：mount -B /home/csb/test/ /var/www/</span>
+
+<span class="c1"># 取消挂载</span>
+unmount /home/csb/test/
+
+<span class="c1"># 查看帮助文档</span>
+mount -h
+</code></pre></div>
+</td></tr></table>
+<p>Linux中挂载详解</p>
+<p><img alt="" src="../img/Linux-root-dir.png" /></p>
+</li>
+<li>
+<p>Linux中的根目录以外的文件要想被访问，需要将其“关联”到根目录下的某个目录来实现，这种关联操作就是“挂载”，根目录下的某个目录就是“挂载点”。解除关联关系的过程称“卸载”</p>
+</li>
+<li>
+<p>“挂载点”要求</p>
+<ul>
+<li>挂载点目录不可被其他进程使用</li>
+<li>挂载点下原有文件将被隐藏</li>
+</ul>
+<p><details>
+    <summary>linux nfs远程挂载文件目录 - 大概了解过程 / 具体没实践</summary></p>
+<ol>
+<li><a href="https://www.cnblogs.com/fooller/p/11511380.html">https://www.cnblogs.com/fooller/p/11511380.html</a></li>
+<li><a href="https://www.cnblogs.com/merely/p/10793877.html">https://www.cnblogs.com/merely/p/10793877.html</a></li>
+<li><a href="https://www.cnblogs.com/ylnic/p/10044271.html">https://www.cnblogs.com/ylnic/p/10044271.html</a></li>
+</ol>
+</details>
+</li>
+</ul>
+<h2 id="step-3">Step 3<a class="headerlink" href="#step-3" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>编写hello.c程序，打印输出自己的姓名拼音及学号</strong></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1"># 进入test文件夹</span>
+<span class="nb">cd</span> ./test/
+<span class="c1"># 新建</span>
+vi hello.c
+</code></pre></div>
+</td></tr></table>
+<p>写入如下内容(首先按insert，才可编辑)</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;chensibo201710513054</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>按esc退出后，<code>:wq</code>保存</p>
+</li>
+</ul>
+<h2 id="step-4delete">Step 4【delete】<a class="headerlink" href="#step-4delete" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>下载解压交叉编译工具到/test文件夹下，添加系统路径</strong></li>
+</ul>
+<p>交叉编译：在当前编译平台下，编译出来的程序能运行在体系结构不同的另一种目标平台上，但是编译平台本身却不能运行该程序。比如，在<code>x86</code>平台上，编写程序并编译成能运行在<code>ARM</code>平台的程序，编译得到的程序在<code>x86</code>平台上是不能运行的，必须放到<code>ARM</code>平台上才能运行</p>
+<details>
+<summary>个人理解思路 - 未实践</summary>
+
+1. 首先安装Linux的交叉编译工具链，下载后解压(tar命令)
+    - https://blog.csdn.net/baidu_37973494/article/details/82949963
+2. 将该工具链导出到环境变量，使得终端可以直接使用命令
+    - https://blog.csdn.net/zy_heu/article/details/80062806
+    - https://blog.csdn.net/lhh_qrsly/article/details/109193284
+
+</details>
+
+<h2 id="step-5">Step 5<a class="headerlink" href="#step-5" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>编写makefile文件，通过make实现hello.c交叉编译</strong></p>
+</li>
+<li>
+<p>编写makefile文件，在命令行下</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>gedit makefile1
+<span class="c1"># 或者 vim makefile1</span>
+</code></pre></div>
+</td></tr></table>
+<p>写入如下内容：</p>
+<p>法①</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nf">all</span><span class="o">:</span>
+    gcc hello.c -o hello
+<span class="nf">clean</span><span class="o">:</span>
+    rm -rf hello hello.o
+</code></pre></div>
+</td></tr></table>
+<p>上述修改为 <img alt="🤖" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f916.svg" title=":robot:" />makefile<strong>自动变量</strong>写法</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nf">.PHONY</span><span class="o">:</span><span class="n">clean</span>
+<span class="nv">CC</span> <span class="o">=</span> gcc
+<span class="nv">OBJ</span> <span class="o">=</span> hello.c
+<span class="nf">hello</span><span class="o">:</span><span class="k">$(</span><span class="nv">OBJ</span><span class="k">)</span> <span class="c">#hello:hello.c</span>
+    <span class="k">$(</span>CC<span class="k">)</span> $^ -o <span class="nv">$@</span>
+
+<span class="nf">clean</span><span class="o">:</span>
+    rm -f *.o hello
+</code></pre></div>
+</td></tr></table>
+<p>解析：</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nf">.PHONY</span><span class="o">:</span><span class="n">clean</span>
+<span class="nv">CC</span> <span class="o">=</span> gcc
+<span class="nv">OBJ</span> <span class="o">=</span> hello.c
+<span class="nf">hello</span><span class="o">:</span><span class="k">$(</span><span class="nv">OBJ</span><span class="k">)</span>
+    <span class="k">$(</span>CC<span class="k">)</span> $^ -o <span class="nv">$@</span>
+<span class="c">    # $^ 指的是冒号后的值</span>
+<span class="c">    # $@ 指的是冒号前面的hello</span>
+<span class="c">    # 相当于gcc hello.c -o hello</span>
+<span class="nf">clean</span><span class="o">:</span>
+    rm -f *.o hello
+</code></pre></div>
+</td></tr></table>
+<p><details>
+<summary>关于自动变量的一些tips</summary></p>
+<table>
+<thead>
+<tr>
+<th>选项名</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$@</td>
+<td>规则的目标文件名</td>
+</tr>
+<tr>
+<td>$&lt;</td>
+<td>规则的第一个依赖文件名</td>
+</tr>
+<tr>
+<td>$^</td>
+<td>规则的所有依赖文件列表</td>
+</tr>
+</tbody>
+</table>
+<p>reference:
+- <a href="https://blog.csdn.net/men_wen/article/details/75272585">https://blog.csdn.net/men_wen/article/details/75272585</a>
+- <a href="https://blog.csdn.net/u010299133/article/details/88761179">https://blog.csdn.net/u010299133/article/details/88761179</a></p>
+</details>
+<hr />
+<p>或者法② [稍复杂，分为两个过程]</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nf">hello</span><span class="o">:</span><span class="n">hello</span>.<span class="n">o</span>
+    gcc hello.o -o hello
+<span class="nf">hello.o</span><span class="o">:</span><span class="n">hello</span>.<span class="n">c</span>
+    gcc -c hello.c
+<span class="nf">clean</span><span class="o">:</span>
+    rm -rf hello.o hello
+</code></pre></div>
+</td></tr></table>
+<p>对应的自动变量写法</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nf">.PHONY</span><span class="o">:</span><span class="n">clean</span>
+<span class="nv">CC</span> <span class="o">=</span> gcc
+<span class="nf">hello</span><span class="o">:</span><span class="n">hello</span>.<span class="n">o</span>
+    <span class="k">$(</span>CC<span class="k">)</span> $^ -o <span class="nv">$@</span>
+<span class="nf">hello.o</span><span class="o">:</span><span class="n">hello</span>.<span class="n">c</span>
+    <span class="k">$(</span>CC<span class="k">)</span> -c $^ -o <span class="nv">$@</span>
+
+<span class="nf">clean</span><span class="o">:</span>
+    rm -f *.o hello
+</code></pre></div>
+</td></tr></table>
+<ul>
+<li><code>all</code>：其功能一般是编译所有的目标</li>
+<li><code>clean</code>：功能是删除所有被make创建的文件，此情景下删除的时中间.o文件</li>
+<li>通过gcc不加参数可以<strong>一步直接编译</strong>生成可执行文件</li>
+<li><code>-o &lt;file&gt;</code> 表示将输出放入&lt;文件&gt;</li>
+<li><code>-c</code> 表示编译和汇编，但不要链接，生成.o文件，<code>gcc hello.o</code>即gcc自动链接上一步生成的hello.o来生成最终可执行文件hello</li>
+</ul>
+</li>
+<li>
+<p>通过make将源文件hello.c编译生成可执行文件</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1"># 在命令行下输入</span>
+make -f makefile1
+</code></pre></div>
+</td></tr></table>
+<ul>
+<li>出现遗漏分隔符报错：<a href="https://blog.csdn.net/yiranant/article/details/46582059">https://blog.csdn.net/yiranant/article/details/46582059</a></li>
+</ul>
+</li>
+<li>
+<p>运行</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1"># 终端 - ls - 绿色</span>
+./hello
+</code></pre></div>
+</td></tr></table>
+</li>
+</ul>
+<p>Reference：</p>
+<ul>
+<li><a href="https://blog.csdn.net/songshuai0223/article/details/88207566">https://blog.csdn.net/songshuai0223/article/details/88207566</a></li>
+</ul>
+<h2 id="step-6">Step 6<a class="headerlink" href="#step-6" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>在主机端编译boa</strong></li>
+</ul>
+<h3 id="request_1">Request<a class="headerlink" href="#request_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>老师提供boa</li>
+<li>或者【连网】 <a href="http://www.boa.org/boa-0.94.13.tar.gz">http://www.boa.org/boa-0.94.13.tar.gz</a></li>
+</ul>
+<h3 id="experiment_1">Experiment<a class="headerlink" href="#experiment_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>安装boa</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1"># 安装开发工具及库</span>
+yum install flex bison 
+
+<span class="c1"># 解压</span>
+tar -xzvf boa-0.94.13.tar.gz
+
+<span class="nb">cd</span> boa-0.94.13/src
+
+<span class="c1"># 检测环境，生产makefile</span>
+./configure
+</code></pre></div>
+</td></tr></table>
+</li>
+<li>
+<p>修改boa相关文件</p>
+<ul>
+<li>
+<p>Boa需要在/etc目录下建立一个boa目录，里面放入Boa的主要配置文件boa.conf</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1"># 新建目录</span>
+mkdir /etc/boa
+<span class="c1"># 复制 boa.conf位于解压的压缩包下</span>
+cp boa.conf /etc/boa
+
+<span class="c1"># 修改/etc/boa/boa.conf</span>
+gedit /etc/boa/boa.conf 
+<span class="c1"># 1.User 0</span>
+<span class="c1"># 2.Group 0</span>
+<span class="c1"># 3.ScriptAlias /cgi-bin/ /var/www/cgi-bin/</span>
+<span class="c1"># 4.ServerName www.your.org.here 去掉#</span>
+<span class="c1"># 5.注释掉AccessLog命令 # AccessLog /var/log/boa/access_log</span>
+</code></pre></div>
+</td></tr></table>
+</li>
+<li>
+<p>修改src/compat.h</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1"># 修改 define TIMEZONE_OFFSET(foo) foo##-&gt;tm_gmtoff 为 </span>
+<span class="c1">#define TIMEZONE_OFFSET(foo) foo-&gt;tm_gmtoff</span>
+</code></pre></div>
+</td></tr></table>
+</li>
+<li>
+<p>修改 src/log.c</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="o">(</span>dup2<span class="o">(</span>error_log, STDERR_FILENO<span class="o">)</span> <span class="o">==</span> -1<span class="o">)</span> <span class="o">{</span>
+    DIE<span class="o">(</span><span class="s2">&quot;unable to dup2 the error log&quot;</span><span class="o">)</span><span class="p">;</span>
+<span class="o">}</span>
+
+修改为<span class="o">(</span>即注释掉<span class="o">)</span>
+
+/*if <span class="o">(</span>dup2<span class="o">(</span>error_log, STDERR_FILENO<span class="o">)</span> <span class="o">==</span> -1<span class="o">)</span> <span class="o">{</span>
+    DIE<span class="o">(</span><span class="s2">&quot;unable to dup2 the error log&quot;</span><span class="o">)</span><span class="p">;</span>
+<span class="o">}</span>*/
+</code></pre></div>
+</td></tr></table>
+</li>
+<li>
+<p>修改src/boa.c</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="o">(</span>setuid<span class="o">(</span><span class="m">0</span><span class="o">)</span> !<span class="o">=</span> -1<span class="o">)</span> <span class="o">{</span>
+  DIE<span class="o">(</span>”icky Linux kernel bug!”<span class="o">)</span><span class="p">;</span>
+<span class="o">}</span>
+
+修改为
+
+<span class="c1">#if 0</span>
+
+<span class="k">if</span> <span class="o">(</span>setuid<span class="o">(</span><span class="m">0</span><span class="o">)</span> !<span class="o">=</span> -1<span class="o">)</span> <span class="o">{</span>
+    DIE<span class="o">(</span>”icky Linux kernel bug!”<span class="o">)</span><span class="p">;</span>
+<span class="o">}</span>
+
+<span class="c1">#endif</span>
+</code></pre></div>
+</td></tr></table>
+</li>
+</ul>
+</li>
+<li>
+<p>创建log目录</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>mkdir /var/log/boa
+mkdir /var/log/boa/error_log
+mkdir /var/log/boa/access_log
+<span class="c1"># 修改权限</span>
+chmod -R <span class="m">777</span> /var/log/boa 
+<span class="c1"># 修改权限</span>
+chmod -R <span class="m">777</span> /var/log/boa/error_log 
+<span class="c1"># 修改权限</span>
+chmod -R <span class="m">777</span> /var/log/boa/access_log
+</code></pre></div>
+</td></tr></table>
+</li>
+<li>
+<p>创建CGI目录</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1"># 创建cgi文件存放目录，已经有了可以不建</span>
+mkdir /var/www/cgi-bin 
+<span class="c1"># 修改权限</span>
+chmod -R <span class="m">777</span> /var/www/cgi-bin 
+</code></pre></div>
+</td></tr></table>
+</li>
+<li>
+<p>在src目录下编译</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1"># 编译</span>
+make 
+</code></pre></div>
+</td></tr></table>
+</li>
+<li>
+<p>在src目录下运行boa</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>./boa
+</code></pre></div>
+</td></tr></table>
+<p><img alt="boa-start" src="../img/boa-start.png" /></p>
+</li>
+</ul>
+<p>Reference：</p>
+<ul>
+<li>首推教程-<a href="https://blog.csdn.net/wangjingnbamvp/article/details/8701257">https://blog.csdn.net/wangjingnbamvp/article/details/8701257</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/115112314?from_voters_page=true">https://zhuanlan.zhihu.com/p/115112314?from_voters_page=true</a></li>
+<li><a href="https://blog.csdn.net/nesxiaogu/article/details/85274626">vmware共享文件夹</a></li>
+</ul>
+<h2 id="step-7">Step 7<a class="headerlink" href="#step-7" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>编写网页文件，通过浏览器访问boa服务器网页 </strong></p>
+</li>
+<li>
+<p>在boa已启动的前提下，在/var/www/html目录下，新建index.html / 如果已经有了就用自己的内容覆盖他</p>
+</li>
+<li>
+<p>在firefox输入 127.0.0.1，即可显示自己编写的网页</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>
+            Welcome to xxx&#39;s Website!
+        <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+</li>
+<li>
+<p>在firefox输入 127.0.0.1，即可显示自己编写的网页</p>
+<p><img alt="website-success" src="../img/website.png" /></p>
+</li>
+</ul>
+<hr />
+<p>上述Step6和Step7的boa换成apache【boa跑不起来用apache】</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1"># 启动apache</span>
+systemctl start httpd
+
+<span class="c1"># 停止apache start -&gt; stop</span>
+</code></pre></div>
+</td></tr></table>
+<p>其余访问步骤同上</p>
+<h2 id="step-8">Step 8<a class="headerlink" href="#step-8" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>编写shell程序，检测/test文件夹是否存在，如果存在显示里边</strong></p>
+</li>
+<li>
+<p>首先出/test目录(即和test目录并行)，新建shell脚本</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>vi a.sh
+</code></pre></div>
+</td></tr></table>
+</li>
+<li>
+<p>内容如下【垃圾代码，建议自行百度】<img alt="🤖" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f916.svg" title=":robot:" /><img alt="㊙️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/3299.svg" title=":secret:" /><img alt="🔫" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f52b.svg" title=":gun:" /></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="ch">#! /bin/bash</span>
+
+<span class="k">for</span> file <span class="k">in</span> <span class="sb">`</span>ls<span class="sb">`</span> <span class="c1">#注意此处这是两个反引号，表示运行系统命令</span>
+<span class="k">do</span>
+    <span class="c1"># -d directory 判断文件夹test是否存在</span>
+    <span class="k">if</span> <span class="o">[[</span> ! -d <span class="s2">&quot;test&quot;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+        pass
+    <span class="k">else</span>
+        <span class="nb">echo</span> <span class="s2">&quot;test exists, showing inside...&quot;</span>
+        <span class="k">for</span> file <span class="k">in</span> <span class="s2">&quot;./test&quot;</span>/*
+        <span class="k">do</span>
+            <span class="nb">echo</span> <span class="s2">&quot;file: </span><span class="si">${</span><span class="nv">file</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">done</span>
+        <span class="nb">break</span>
+    <span class="k">fi</span>
+<span class="k">done</span>
+</code></pre></div>
+</td></tr></table>
+</li>
+<li>
+<p>执行shell</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>bash ./a.sh
+</code></pre></div>
+</td></tr></table>
+<p><img alt="shell" src="../img/shell.png" /></p>
+</li>
+</ul>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../Forensics/image/" title="数字图像取证" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                数字图像取证
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Linux_Corresponence_Windows/" title="Linux与Windows文件交互" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                Linux与Windows文件交互
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/purplezi" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.0.0-rc.8/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
